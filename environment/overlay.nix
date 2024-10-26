@@ -1,4 +1,4 @@
-{ autoPatchelfHook, basePython, ffmpeg, lib, sox, tbb_2021_11 }:
+{ autoPatchelfHook, basePython, ffmpeg_4, ffmpeg_6, lib, sox, tbb_2021_11 }:
 
 final: prev:
 
@@ -147,7 +147,10 @@ in
       # libavfilter.so.9
       # libavformat.so.60
       # libavutil.so.58
-      ffmpeg
+      ffmpeg_6
+
+      # TODO: list libs
+      ffmpeg_4
 
       # libsox.so
       sox
