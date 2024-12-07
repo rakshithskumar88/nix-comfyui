@@ -1,14 +1,13 @@
 { buildNpmPackage, fetchFromGitHub }:
 
-buildNpmPackage rec {
+buildNpmPackage {
   name = "comfyui-frontend";
-  version = "1.2.55";
 
   src = fetchFromGitHub {
     owner = "Comfy-Org";
     repo = "ComfyUI_frontend";
     fetchSubmodules = false;
-    rev = "v1.2.55";
+    rev = "7025e321de3dfc49226c5f34c85df1c351b80633";
     hash = "sha256-4sJ3l+az1RHe+OyTONjClHLeglpid/CYsNnAPBEcaQk=";
   };
 

@@ -1292,6 +1292,22 @@ tqdm = "*"
 test = ["build", "mypy", "pytest", "pytest-xdist", "ruff", "twine", "types-requests", "types-setuptools"]
 
 [[package]]
+name = "gguf"
+version = "0.10.0"
+description = "Read and write ML models in GGUF for GGML"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "gguf-0.10.0-py3-none-any.whl", hash = "sha256:706089fba756a06913227841b4a6c8398360fa991569fd974e663a92b224e33f"},
+    {file = "gguf-0.10.0.tar.gz", hash = "sha256:52a30ef26328b419ffc47d9269fc580c238edf1c8a19b5ea143c323e04a038c1"},
+]
+
+[package.dependencies]
+numpy = ">=1.17"
+pyyaml = ">=5.1"
+tqdm = ">=4.27"
+
+[[package]]
 name = "h11"
 version = "0.14.0"
 description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
@@ -5625,4 +5641,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "==3.11.9"
-content-hash = "b1c101350ccc69e88362946b870b700ee1743a90866ac92f5bd0533b74f463ff"
+content-hash = "45f0512aaf626724a8169ced93b1bcca6930228d21038b68827bd8e901f47dd1"

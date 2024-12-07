@@ -4,24 +4,28 @@ let
   pyproject = emptyPyproject.override {
     content = {
       tool.poetry.name = "comfyui-unwrapped";
-      tool.poetry.version = "0.2.2";
+      tool.poetry.version = "0.0.0";
     };
   };
-in
-
-python3.pkgs.buildPythonPackage {
-  name = "comfyui-unwrapped";
-  version = "0.2.2";
-
-  format = "pyproject";
 
   src = fetchFromGitHub {
     owner = "comfyanonymous";
     repo = "ComfyUI";
     fetchSubmodules = false;
-    rev = "v0.2.2";
+    rev = "0c7c98a965bff25f9398a4b28dfc274bedad9f6c";
     hash = "sha256-KO6Ae7uUUNRaDLj/ScaaNcuDXnuNCv0oBYRqe/x6BRs=";
   };
+
+  shortRev = builtins.substring 0 8 src.rev;
+in
+
+python3.pkgs.buildPythonPackage {
+  name = "comfyui-unwrapped";
+  version = "0.0.0";
+
+  format = "pyproject";
+
+  inherit src;
 
   nativeBuildInputs = [
     python3.pkgs.poetry-core
@@ -54,10 +58,13 @@ python3.pkgs.buildPythonPackage {
 
   patches = [
     ./0001-fix-paths.patch
+    ./0002-fix-version.patch
   ];
 
   postPatch = ''
     cp ${pyproject} pyproject.toml
+    substituteInPlace server.py \
+      --subst-var-by version ${lib.escapeShellArg shortRev}
     rm --force --recursive .ci script_examples tests-unit web new_updater.py
   '';
 

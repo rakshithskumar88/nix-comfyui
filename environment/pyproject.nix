@@ -19,6 +19,7 @@ let
         filelock = "*";
         ftfy = "*";
         fvcore = "*";
+        gguf = "*";
         huggingface-hub = "*";
         importlib-metadata = "*";
         insightface = "*";
