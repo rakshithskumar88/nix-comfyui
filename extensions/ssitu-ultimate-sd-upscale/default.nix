@@ -8,8 +8,8 @@ buildExtension {
     owner = "ssitu";
     repo = "ComfyUI_UltimateSDUpscale";
     fetchSubmodules = true;
-    rev = "70083f5d449c498ee0fb35f5293c91cebac4b758";
-    hash = "sha256-/DdjDkqSI9OkNOavYeTqjLwfrjLTx3mvTZapi4snXjc=";
+    rev = "e617ff20e7ef5baf6526c5ff4eb46a35d24ecbba";
+    hash = "sha256-J1Vj9LD5N882KMY0RAIBNOv149D7Cl/MOuajUEeL05s=";
   };
 
   propagatedBuildInputs = [
@@ -25,7 +25,6 @@ buildExtension {
       "^modules(\\..+)?$"
       "^repositories$"
       "^usdu_patch$"
-      "^utils$"
     ];
   };
 

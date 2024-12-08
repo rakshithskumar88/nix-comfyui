@@ -8,8 +8,8 @@ buildExtension {
     owner = "Fannovel16";
     repo = "comfyui_controlnet_aux";
     fetchSubmodules = false;
-    rev = "4cd233c5d7afe2e51bf57ee7a5ba7e6fcb9cbb22";
-    hash = "sha256-U2ScfX0n6Dyc9TBUV5iJJfP3H/Hp0tACF6tDYOKPmFo=";
+    rev = "5a049bde9cc117dafc327cded156459289097ea1";
+    hash = "sha256-LFC2BakhykMXEfdldPCBHnqizjOEgXyzgm3yhN2DFec=";
   };
 
   propagatedBuildInputs = [
@@ -21,6 +21,7 @@ buildExtension {
     python3.pkgs.fvcore
     python3.pkgs.huggingface-hub
     python3.pkgs.importlib-metadata
+    python3.pkgs.matplotlib
     python3.pkgs.mediapipe
     python3.pkgs.numpy
     python3.pkgs.omegaconf

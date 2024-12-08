@@ -8,8 +8,8 @@ buildExtension {
     owner = "huchenlei";
     repo = "ComfyUI-layerdiffuse";
     fetchSubmodules = false;
-    rev = "2cbfe3972c18f3bce49d6bf9631d5fd49d9d81d0";
-    hash = "sha256-cNYPMlev7DcY9sDle8/uWGhHZSP04uoghzP20biQh9o=";
+    rev = "6e4aeb2da78ba48c519367608a61bf47ea6249b4";
+    hash = "sha256-RTYaPmN9L7MowGIBn2lzv4nEwNJCM3f4BWFZG+ks0Go=";
   };
 
   propagatedBuildInputs = [

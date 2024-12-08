@@ -8,8 +8,8 @@ buildExtension {
     owner = "Extraltodeus";
     repo = "Skimmed_CFG";
     fetchSubmodules = false;
-    rev = "bc083b352f1b3d580c5167071cf81f7d36e3e4e6";
-    hash = "sha256-xpApC2cR4liTH4K0S99WT0G0j8eNimKfJLV3SdaHPNo=";
+    rev = "2712803a8b721665d43d5aeb4430e5ac0e931091";
+    hash = "sha256-7Z8/9OOJHjHUXP1nbXhHzjFdTsLthq+oFbYRRj525RU=";
   };
 
   propagatedBuildInputs = [

@@ -14,12 +14,16 @@ stdenv.mkDerivation {
     owner = "Acly";
     repo = "krita-ai-diffusion";
     fetchSubmodules = true;
-    rev = "5c8303e3ca961e4a761e6d8b8ef8a8e5ba1d2f2a";
-    hash = "sha256-ixcKRJWJ7ajRxGEMwzBNaO4wjaxllRqhY7BwJFvJxts=";
+    rev = "2e5ca9c242bb4e1603d2674620a84465fed770ee";
+    hash = "sha256-VSJuXi8zAFMwJwrBsiGXnLXJV/s2doT1qRCL2KDm1vU=";
   };
 
   nativeBuildInputs = [
     makeWrapper
+  ];
+
+  patches = [
+    ./0001-fix-paths.patch
   ];
 
   installPhase = ''

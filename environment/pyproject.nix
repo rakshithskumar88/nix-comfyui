@@ -24,10 +24,11 @@ let
         importlib-metadata = "*";
         insightface = "*";
         kornia = "*";
+        matplotlib = "*";
         mediapipe = "*";
         numba = "*";
         numexpr = "*";
-        numpy = "*";
+        numpy = "<2"; # numpy==2.0.2 gives "AttributeError: _ARRAY_API not found"
         omegaconf = "*";
         onnx = "*";
         onnxruntime = "*";

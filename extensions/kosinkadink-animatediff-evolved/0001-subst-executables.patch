@@ -5,10 +5,10 @@ Subject: [PATCH] subst-executables
 
 
 diff --git a/animatediff/nodes_deprecated.py b/animatediff/nodes_deprecated.py
-index 7b6759c..b7ebbb0 100644
+index 50fe5c9..f6330e9 100644
 --- a/animatediff/nodes_deprecated.py
 +++ b/animatediff/nodes_deprecated.py
-@@ -145,7 +145,7 @@ class AnimateDiffCombine_Deprecated:
+@@ -154,7 +154,7 @@ class AnimateDiffCombineDEPR:
      ffmpeg_warning_already_shown = False
      @classmethod
      def INPUT_TYPES(s):
@@ -17,7 +17,7 @@ index 7b6759c..b7ebbb0 100644
          #Hide ffmpeg formats if ffmpeg isn't available
          if ffmpeg_path is not None:
              ffmpeg_formats = ["video/"+x[:-5] for x in folder_paths.get_filename_list(Folders.VIDEO_FORMATS)]
-@@ -248,7 +248,7 @@ class AnimateDiffCombine_Deprecated:
+@@ -258,7 +258,7 @@ class AnimateDiffCombineDEPR:
              )
          else:
              # Use ffmpeg to save a video

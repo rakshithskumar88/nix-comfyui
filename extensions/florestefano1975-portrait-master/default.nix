@@ -8,8 +8,8 @@ buildExtension {
     owner = "florestefano1975";
     repo = "comfyui-portrait-master";
     fetchSubmodules = false;
-    rev = "0eccf8e8ccb6a337a43e613d8634d298280ae496";
-    hash = "sha256-nBOzcPwCx1JOMuS2k4TmYMJMTziyL7yRINsi06X+VJ0=";
+    rev = "59795c43e610cf163812076430138f7a9bfc8366";
+    hash = "sha256-+YANDNvK1sySYCH6LQquyyHtHd8tTSdz7AWE2E4clyg=";
   };
 
   postPatch = ''

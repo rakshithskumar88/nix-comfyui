@@ -5,10 +5,10 @@ Subject: [PATCH] use-neutral-colors
 
 
 diff --git a/src/main.ts b/src/main.ts
-index a49222d..b2bbbd0 100644
+index 843d10d..6c75e31 100644
 --- a/src/main.ts
 +++ b/src/main.ts
-@@ -16,7 +16,8 @@ import 'primeicons/primeicons.css'
+@@ -17,7 +17,8 @@ import 'primeicons/primeicons.css'
  
  const ComfyUIPreset = definePreset(Aura, {
    semantic: {

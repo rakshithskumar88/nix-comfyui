@@ -8,8 +8,8 @@ buildExtension {
     owner = "Fannovel16";
     repo = "ComfyUI-Frame-Interpolation";
     fetchSubmodules = false;
-    rev = "483dfe64465369e077d351ed2f1acbf7dc046864";
-    hash = "sha256-EyuWpnuGhlfq0Y51BJEvcF8grOhTT+RuItPouwS7cAI=";
+    rev = "c336f7184cb1ac1243381e725fea1ad2c0a10c09";
+    hash = "sha256-GZYYpPKH6qWZAgZ2ogzjqBXEsl1/PvylJ00q6AWdIOE=";
   };
 
   propagatedBuildInputs = [

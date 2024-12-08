@@ -5,10 +5,10 @@ Subject: [PATCH] subst-executables
 
 
 diff --git a/videohelpersuite/utils.py b/videohelpersuite/utils.py
-index 3feb0ac..66dca6b 100644
+index f1ab782..d024b0f 100644
 --- a/videohelpersuite/utils.py
 +++ b/videohelpersuite/utils.py
-@@ -44,8 +44,8 @@ class ImageOrLatent(str):
+@@ -46,8 +46,8 @@ class ImageOrLatent(str):
          return not (other == "IMAGE" or other == "LATENT" or other == "*")
  imageOrLatent = ImageOrLatent("IMAGE")
  
@@ -19,7 +19,7 @@ index 3feb0ac..66dca6b 100644
  else:
      ffmpeg_paths = []
      try:
-@@ -75,12 +75,12 @@ else:
+@@ -77,12 +77,12 @@ else:
              ffmpeg_path = ffmpeg_paths[0]
          else:
              ffmpeg_path = max(ffmpeg_paths, key=ffmpeg_suitability)

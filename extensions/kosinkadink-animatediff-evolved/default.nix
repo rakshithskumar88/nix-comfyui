@@ -8,8 +8,8 @@ buildExtension {
     owner = "Kosinkadink";
     repo = "ComfyUI-AnimateDiff-Evolved";
     fetchSubmodules = false;
-    rev = "675241cd64931943be9030a1e67743817ab526de";
-    hash = "sha256-EL0NFPNtw5sP8Q0T3fnfAsQ07RpzMylG6Qp6uRp7h4E=";
+    rev = "4f1344e25387d21cdded8f48f4bc59bd86bea9e8";
+    hash = "sha256-mDXLvL87PCgJdk4a4oFnBj2Z2QBSllsghr0/ncZTH2k=";
   };
 
   propagatedBuildInputs = [

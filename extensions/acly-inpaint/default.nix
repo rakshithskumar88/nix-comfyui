@@ -8,8 +8,8 @@ buildExtension {
     owner = "Acly";
     repo = "comfyui-inpaint-nodes";
     fetchSubmodules = false;
-    rev = "6ce66ff1b5ed4e5819b23ccf1feb976ef479528a";
-    hash = "sha256-D/I874z0dTKn9B75b8hNxYnHiRKS6ki5CVz6N115NOI=";
+    rev = "20092c37b9dfc481ca44e8577a9d4a9d426c0e56";
+    hash = "sha256-yI8dbm10MFGBjerVdIAHSBqRPtvcVJ5t/BsSmVkWlXY=";
   };
 
   propagatedBuildInputs = [

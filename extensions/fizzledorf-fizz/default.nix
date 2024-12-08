@@ -8,8 +8,8 @@ buildExtension {
     owner = "FizzleDorf";
     repo = "ComfyUI_FizzNodes";
     fetchSubmodules = false;
-    rev = "0e30c12400064de068ab599b045b430e3c0ff3cf";
-    hash = "sha256-FklAx1yN88+TTT0h1SPw4FVMN3XXDgGlTWaVDjczK5k=";
+    rev = "7d6ea60c55ebd1268bd76fa462da052852bff192";
+    hash = "sha256-LoF2zCPDh5XK5bYpnnKPj78xkitXqx1861lVqxxGvVQ=";
   };
 
   propagatedBuildInputs = [

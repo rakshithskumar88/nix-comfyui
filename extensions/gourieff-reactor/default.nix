@@ -8,11 +8,12 @@ buildExtension {
     owner = "Gourieff";
     repo = "comfyui-reactor-node";
     fetchSubmodules = false;
-    rev = "2832357b72d55017ec689f51e2a7738d7eabfa74";
-    hash = "sha256-nLdG2uYH3irrZzPahCk6QM9+73el93MXaBrPb1YBSnE=";
+    rev = "b3d85c761c5c8d113d0ad6e8845996cc83215d29";
+    hash = "sha256-Xy0hT5NWd5+k5o8kJtHz4qXyxsBDVfLQ2iYxywgZjoY=";
   };
 
   propagatedBuildInputs = [
+    python3.pkgs.albumentations
     python3.pkgs.insightface
     python3.pkgs.numpy
     python3.pkgs.onnx

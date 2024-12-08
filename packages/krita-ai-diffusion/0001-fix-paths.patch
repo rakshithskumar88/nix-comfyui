@@ -1,0 +1,72 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: dyscorv <174674743+dyscorv@users.noreply.github.com>
+Date: Sun, 8 Dec 2024 00:00:00 +0000
+Subject: [PATCH] fix-paths
+
+
+diff --git a/ai_diffusion/resources.py b/ai_diffusion/resources.py
+index ade812a..57e9b90 100644
+--- a/ai_diffusion/resources.py
++++ b/ai_diffusion/resources.py
+@@ -713,7 +713,7 @@ prefetch_models = [
+         ResourceId(ResourceKind.preprocessor, Arch.all, ControlMode.scribble),
+         {
+             Path(
+-                "custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/table5_pidinet.pth"
++                "custom_nodes/fannovel16-controlnet-aux/ckpts/lllyasviel/Annotators/table5_pidinet.pth"
+             ): "https://huggingface.co/lllyasviel/Annotators/resolve/main/table5_pidinet.pth"
+         },
+     ),
+@@ -722,10 +722,10 @@ prefetch_models = [
+         ResourceId(ResourceKind.preprocessor, Arch.all, ControlMode.line_art),
+         {
+             Path(
+-                "custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/sk_model.pth"
++                "custom_nodes/fannovel16-controlnet-aux/ckpts/lllyasviel/Annotators/sk_model.pth"
+             ): "https://huggingface.co/lllyasviel/Annotators/resolve/main/sk_model.pth",
+             Path(
+-                "custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/sk_model2.pth"
++                "custom_nodes/fannovel16-controlnet-aux/ckpts/lllyasviel/Annotators/sk_model2.pth"
+             ): "https://huggingface.co/lllyasviel/Annotators/resolve/main/sk_model2.pth",
+         },
+     ),
+@@ -734,7 +734,7 @@ prefetch_models = [
+         ResourceId(ResourceKind.preprocessor, Arch.all, ControlMode.soft_edge),
+         {
+             Path(
+-                "custom_nodes/comfyui_controlnet_aux/ckpts/TheMistoAI/MistoLine/Anyline/MTEED.pth"
++                "custom_nodes/fannovel16-controlnet-aux/ckpts/TheMistoAI/MistoLine/Anyline/MTEED.pth"
+             ): "https://huggingface.co/TheMistoAI/MistoLine/resolve/main/Anyline/MTEED.pth"
+         },
+     ),
+@@ -743,7 +743,7 @@ prefetch_models = [
+         ResourceId(ResourceKind.preprocessor, Arch.all, ControlMode.depth),
+         {
+             Path(
+-                "custom_nodes/comfyui_controlnet_aux/ckpts/depth-anything/Depth-Anything-V2-Base/depth_anything_v2_vitb.pth"
++                "custom_nodes/fannovel16-controlnet-aux/ckpts/depth-anything/Depth-Anything-V2-Base/depth_anything_v2_vitb.pth"
+             ): "https://huggingface.co/depth-anything/Depth-Anything-V2-Base/resolve/main/depth_anything_v2_vitb.pth"
+         },
+     ),
+@@ -752,10 +752,10 @@ prefetch_models = [
+         ResourceId(ResourceKind.preprocessor, Arch.all, ControlMode.pose),
+         {
+             Path(
+-                "custom_nodes/comfyui_controlnet_aux/ckpts/hr16/yolo-nas-fp16/yolo_nas_l_fp16.onnx"
++                "custom_nodes/fannovel16-controlnet-aux/ckpts/hr16/yolo-nas-fp16/yolo_nas_l_fp16.onnx"
+             ): "https://huggingface.co/hr16/yolo-nas-fp16/resolve/main/yolo_nas_l_fp16.onnx",
+             Path(
+-                "custom_nodes/comfyui_controlnet_aux/ckpts/yzd-v/DWPose/dw-ll_ucoco_384.onnx"
++                "custom_nodes/fannovel16-controlnet-aux/ckpts/yzd-v/DWPose/dw-ll_ucoco_384.onnx"
+             ): "https://huggingface.co/yzd-v/DWPose/resolve/main/dw-ll_ucoco_384.onnx",
+         },
+     ),
+@@ -764,7 +764,7 @@ prefetch_models = [
+         ResourceId(ResourceKind.preprocessor, Arch.all, "safetychecker"),
+         {
+             Path(
+-                "custom_nodes/comfyui-tooling-nodes/safetychecker/model.safetensors"
++                "custom_nodes/acly-tooling/safetychecker/model.safetensors"
+             ): "https://huggingface.co/CompVis/stable-diffusion-safety-checker/resolve/refs%2Fpr%2F41/model.safetensors"
+         },
+     ),

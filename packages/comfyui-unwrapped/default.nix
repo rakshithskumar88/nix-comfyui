@@ -12,8 +12,8 @@ let
     owner = "comfyanonymous";
     repo = "ComfyUI";
     fetchSubmodules = false;
-    rev = "0c7c98a965bff25f9398a4b28dfc274bedad9f6c";
-    hash = "sha256-KO6Ae7uUUNRaDLj/ScaaNcuDXnuNCv0oBYRqe/x6BRs=";
+    rev = "6579632201315e616255556bfb72724d9e638225";
+    hash = "sha256-vnzdLuYxjwMm5CcagpsAv9MLh/p6tqviQgpNozxLmH4=";
   };
 
   shortRev = builtins.substring 0 8 src.rev;
@@ -110,6 +110,7 @@ python3.pkgs.buildPythonPackage {
     ];
 
     check-pkgs.ignoredModuleNames = [
+      "^comfy_types$"
       "^intel_extension_for_pytorch$"
       "^new_updater$"
       "^torch_directml$"
