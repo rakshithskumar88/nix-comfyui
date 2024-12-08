@@ -30,10 +30,6 @@ buildExtension {
     python3.pkgs.ultralytics
   ];
 
-  patches = [
-    ./0001-fix-paths.patch
-  ];
-
   postPatch = ''
     rm install.py
 

@@ -17,8 +17,7 @@ buildExtension {
   ];
 
   patches = [
-    ./0001-fix-paths.patch
-    ./0002-use-web-directory.patch
+    ./0001-use-web-directory.patch
   ];
 
   postPatch = ''
@@ -32,6 +31,12 @@ buildExtension {
           'CATEGORY = "inversion_demo'
     done
   '';
+
+  passthru = {
+    comfyui.stateDirs = [
+      "components"
+    ];
+  };
 
   meta = {
     license = lib.licenses.unfree; # not specified

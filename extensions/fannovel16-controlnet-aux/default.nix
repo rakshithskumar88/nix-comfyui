@@ -39,10 +39,6 @@ buildExtension {
     python3.pkgs.yapf
   ];
 
-  patches = [
-    ./0001-fix-paths.patch
-  ];
-
   postPatch = ''
     find . -type f -name "*.py" | while IFS= read -r filename; do
       substituteInPlace "$filename" \
@@ -50,9 +46,16 @@ buildExtension {
           'CATEGORY = "ControlNet Preprocessors' \
           'CATEGORY = "controlnet_preprocessors'
     done
+
+    mkdir --parents ckpts
+    touch ckpts/.keep
   '';
 
   passthru = {
+    comfyui.stateDirs = [
+      "custom_nodes/fannovel16-controlnet-aux/ckpts"
+    ];
+
     check-pkgs.fromImports = false;
   };
 

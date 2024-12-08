@@ -24,9 +24,16 @@ buildExtension {
     python3.pkgs.transformers
   ];
 
-  patches = [
-    ./0001-fix-paths.patch
-  ];
+  passthru = {
+    comfyui.stateDirs = [
+      "custom_nodes/acly-tooling/safetychecker"
+    ];
+
+    comfyui.prepopulatedStateFiles = [
+      "custom_nodes/acly-tooling/safetychecker/config.json"
+      "custom_nodes/acly-tooling/safetychecker/preprocessor_config.json"
+    ];
+  };
 
   meta = {
     license = lib.licenses.gpl3;

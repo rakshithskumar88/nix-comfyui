@@ -57,15 +57,39 @@ python3.pkgs.buildPythonPackage {
   ];
 
   patches = [
-    ./0001-fix-paths.patch
-    ./0002-fix-version.patch
+    ./0001-fix-version.patch
   ];
 
   postPatch = ''
     cp ${pyproject} pyproject.toml
+
+    printf "{}\n" >extra_model_paths.yaml
+
     substituteInPlace server.py \
       --subst-var-by version ${lib.escapeShellArg shortRev}
-    rm --force --recursive .ci script_examples tests-unit web new_updater.py
+
+    rm --force --recursive \
+      .ci \
+      .gitattributes \
+      .github \
+      .gitignore \
+      .pylintrc \
+      CODEOWNERS \
+      comfyui_screenshot.png \
+      CONTRIBUTING.md \
+      custom_nodes \
+      extra_model_paths.yaml.example \
+      input \
+      LICENSE \
+      models \
+      new_updater.py \
+      notebooks \
+      output \
+      pytest.ini \
+      README.md \
+      script_examples \
+      tests-unit \
+      web
   '';
 
   pythonImportsCheck = [
@@ -73,6 +97,18 @@ python3.pkgs.buildPythonPackage {
   ];
 
   passthru = {
+    comfyui.stateDirs = [
+      "input"
+      "models"
+      "output"
+      "temp"
+      "user"
+    ];
+
+    comfyui.prepopulatedStateFiles = [
+      "extra_model_paths.yaml"
+    ];
+
     check-pkgs.ignoredModuleNames = [
       "^intel_extension_for_pytorch$"
       "^new_updater$"

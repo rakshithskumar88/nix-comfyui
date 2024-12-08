@@ -29,14 +29,21 @@ buildExtension {
     python3.pkgs.transparent-background
   ];
 
-  patches = [
-    ./0001-fix-paths.patch
-  ];
-
   postPatch = ''
     find . -type f -name "*.py" | xargs sed --in-place \
       "s/[[:space:]]*🔧[[:space:]]*//g" --
   '';
+
+  passthru = {
+    comfyui.stateDirs = [
+      "custom_nodes/cubiq-essentials/fonts"
+      "custom_nodes/cubiq-essentials/luts"
+    ];
+
+    comfyui.prepopulatedStateFiles = [
+      "custom_nodes/cubiq-essentials/fonts/ShareTechMono-Regular.ttf"
+    ];
+  };
 
   meta = {
     license = lib.licenses.mit;

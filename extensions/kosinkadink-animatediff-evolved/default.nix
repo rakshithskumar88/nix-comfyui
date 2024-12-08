@@ -21,8 +21,7 @@ buildExtension {
   ];
 
   patches = [
-    ./0001-fix-paths.patch
-    ./0002-subst-executables.patch
+    ./0001-subst-executables.patch
   ];
 
   postPatch = ''
@@ -43,6 +42,14 @@ buildExtension {
         --replace-quiet "◆" " - "
     done
   '';
+
+  passthru = {
+    comfyui.stateDirs = [
+      "custom_nodes/kosinkadink-animatediff-evolved/models"
+      "custom_nodes/kosinkadink-animatediff-evolved/motion_lora"
+      "custom_nodes/kosinkadink-animatediff-evolved/video_formats"
+    ];
+  };
 
   meta = {
     license = lib.licenses.asl20;

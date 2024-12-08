@@ -1,7 +1,7 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: dyscorv <174674743+dyscorv@users.noreply.github.com>
 Date: Fri, 23 Aug 2024 00:00:00 +0000
-Subject: [PATCH 2/2] subst-executables
+Subject: [PATCH] subst-executables
 
 
 diff --git a/animatediff/nodes_deprecated.py b/animatediff/nodes_deprecated.py

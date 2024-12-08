@@ -31,10 +31,6 @@ buildExtension {
   ++
   (lib.optional (platform != "cuda") python3.pkgs.taichi);
 
-  patches = [
-    ./0001-fix-paths.patch
-  ];
-
   postPatch = ''
     ${lib.optionalString (platform != "cuda") ''
       printf 'ops_backend: "taichi"\n' >config.yaml
@@ -48,9 +44,16 @@ buildExtension {
           'CATEGORY = "ComfyUI-Frame-Interpolation' \
           'CATEGORY = "frame_interpolation'
     done
+
+    mkdir --parents ckpts
+    touch ckpts/.keep
   '';
 
   passthru = {
+    comfyui.stateDirs = [
+      "custom_nodes/fannovel16-frame-interpolation/ckpts"
+    ];
+
     check-pkgs.ignoredModuleNames = [
       "^mysql(\\..+)?$"
       "^pyunpack$"

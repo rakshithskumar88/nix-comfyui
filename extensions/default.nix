@@ -7,6 +7,8 @@
     callPackage ./acly-tooling { };
   badcafecode-execution-inversion-demo =
     callPackage ./badcafecode-execution-inversion-demo { };
+  city96-gguf =
+    callPackage ./city96-gguf { };
   cubiq-essentials =
     callPackage ./cubiq-essentials { };
   cubiq-instantid =
@@ -43,6 +45,4 @@
     callPackage ./lev145-images-grid { };
   ssitu-ultimate-sd-upscale =
     callPackage ./ssitu-ultimate-sd-upscale { };
-  city96-gguf =
-    callPackage ./city96-gguf { };
 }
