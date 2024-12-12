@@ -23,7 +23,12 @@ def main():
     frontend = spec["frontend"]
     interpreter = spec["interpreter"]
     prepopulated_state_files = sorted(spec["prepopulated_state_files"])
-    state_dirs = sorted(spec["state_dirs"])
+    state_dirs = spec["state_dirs"]
+
+    for path in os.environ.get("NIX_COMFYUI_STATE_DIRS", "").split(":"):
+        if path: state_dirs.append(path)
+
+    state_dirs.sort()
 
     cwd = os.getcwd()
     cmd = []
@@ -72,6 +77,8 @@ def main():
     # - $PWD/models -> $PWD/models
     # and so on. Additional directories can be added via:
     # comfyui.override { stateDirs = [ "foo" "bar/baz" ]; }
+    # They can also be added with $NIX_COMFYUI_STATE_DIRS:
+    # export NIX_COMFYUI_STATE_DIRS=foo:bar/baz
     for path in state_dirs:
         mkdir(path)
         cmd.extend(["--bind", f"{cwd}/{path}", f"{cwd}/{path}"])
