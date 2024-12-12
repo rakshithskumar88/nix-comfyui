@@ -7,11 +7,11 @@ buildNpmPackage {
     owner = "Comfy-Org";
     repo = "ComfyUI_frontend";
     fetchSubmodules = false;
-    rev = "43548785b5b0124c81e3a9d7b299bf48631c0253";
-    hash = "sha256-G4xvX+TWMGgqnZyqEtlb+yZ9POb5mOadlNZOraq7y68=";
+    rev = "a2549f23c74374963a0d98c6ba8cbdbed3ca7ab0";
+    hash = "sha256-EisHrKyQcR51KyFKHTO3rf8d1t9vXkeZXwsYD10HAq4=";
   };
 
-  npmDepsHash = "sha256-KR8NIsPc2J6aj57Gl0nfNB26LpYlC5xyR3mpMVjsemo=";
+  npmDepsHash = "sha256-wHVfxjt77pt5T2Co4+4z2OJuwbvoqny3PPVAJA/lgwc=";
 
   patches = [
     ./0001-use-neutral-colors.patch
