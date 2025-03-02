@@ -44,5 +44,5 @@
   ssitu-ultimate-sd-upscale =
     callPackage ./ssitu-ultimate-sd-upscale { };
   comfyui-manager =
-    callPackage ./comfyui-managere { };
+    callPackage ./comfyui-manager { };
 }
