@@ -143,7 +143,6 @@ def detect_old_state():
 
     # yapf: disable
     renamed_dirs = {
-        "custom_nodes/gourieff-reactor": None,
         "models/controlnet_aux/ckpts": "custom_nodes/fannovel16-controlnet-aux/ckpts",
         "models/fonts": "custom_nodes/cubiq-essentials/fonts",
         "models/frame_interpolation": "custom_nodes/fannovel16-frame-interpolation/ckpts",
